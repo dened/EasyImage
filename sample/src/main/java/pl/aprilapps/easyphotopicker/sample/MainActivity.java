@@ -14,7 +14,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import pl.aprilapps.easyphotopicker.DefaultCallback;
@@ -26,10 +26,10 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String PHOTOS_KEY = "easy_image_photos_list";
 
-    @Bind(R.id.recycler_view)
+    @BindView(R.id.recycler_view)
     protected RecyclerView recyclerView;
 
-    @Bind(R.id.gallery_button)
+    @BindView(R.id.gallery_button)
     protected View galleryButton;
 
     private ImagesAdapter imagesAdapter;

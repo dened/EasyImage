@@ -64,7 +64,15 @@ public class EasyImage implements Constants {
     private static Intent createDocumentsIntent(@NonNull Context context, int type) {
         storeType(context, type);
         Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
-        intent.setType("image/*");
+        intent.addCategory(Intent.CATEGORY_OPENABLE);
+
+        intent.setType("*/*");
+        if(Build.VERSION.SDK_INT >= 19) {
+            intent.putExtra(Intent.EXTRA_MIME_TYPES, new String[]{"image/*", "application/pdf"});
+        } else {
+            intent.setType("application/pdf|image/*");
+        }
+
         return intent;
     }
 

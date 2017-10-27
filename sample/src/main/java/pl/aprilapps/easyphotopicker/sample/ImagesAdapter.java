@@ -12,7 +12,7 @@ import com.squareup.picasso.Picasso;
 import java.io.File;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -51,7 +51,7 @@ public class ImagesAdapter extends RecyclerView.Adapter<ImagesAdapter.ViewHolder
 
     protected static class ViewHolder extends RecyclerView.ViewHolder {
 
-        @Bind(R.id.image_view)
+        @BindView(R.id.image_view)
         public ImageView imageView;
 
         public ViewHolder(View itemView) {
